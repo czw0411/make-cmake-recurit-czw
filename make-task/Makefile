@@ -2,17 +2,17 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
 
 calculator: main.o calculator.o logger.o
-	# TODO: link object files into the calculator executable
+	gcc -o calculator main.o calculator.o logger.o
 
 main.o: src/main.c include/calculator.h include/logger.h
-	# TODO: compile src/main.c
+	gcc $(CFLAGS) -c src/main.c
 
 calculator.o: src/calculator.c include/calculator.h
-	# TODO: compile src/calculator.c
+	gcc $(CFLAGS) -c src/calculator.c
 
 logger.o: src/logger.c include/logger.h
-	# TODO: compile src/logger.c
+	gcc $(CFLAGS) -c src/logger.c
 
 .PHONY: clean
 clean:
-	# TODO: remove calculator and all .o files
+	rm -f calculator main.o calculator.o logger.o
