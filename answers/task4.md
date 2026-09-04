@@ -16,4 +16,4 @@ build.sh是一个按顺序执行的全量脚本，即每次运行都会把项目
 
 # 检验结果
 
-![总结](task3.png)
+![检验结果](make-cmake-recurit-czw/task3.png)
